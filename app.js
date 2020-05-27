@@ -9,10 +9,9 @@ const app = document.querySelector("#app");
 
 const onPhotosReady = (photos) => {
   for (let i = 0; i < photos.length; i++) {
-    const element = photos[i];
     const { url } = photos[i];
     //inserting photos as 4 column grid
-    if (i === 0 || i % 4 === 0) {
+    if (i % 4 === 0) {
       insertRow(url);
     } else {
       insertColumn(url);
